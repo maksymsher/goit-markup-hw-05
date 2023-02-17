@@ -106,13 +106,86 @@ p {
   gap: 40px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .header-list .header-list-text {
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: var(--dark);
+
+  position: relative;
+  
 }
+
+.header-list-text::after{
+  content: '';
+  
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--pressed-state);
+
+
+  position: absolute;
+  left: 0px;
+top: 48px;
+
+  display: none;
+
+}
+
+.header-list-text:is(:hover):after{
+  display: block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .header-list .header-list-text:is(:hover, :focus) {
   color: var(--focus-blue);
@@ -139,6 +212,7 @@ p {
 .header-adress .header-adress-list .adress-info:is(:focus, :hover) {
   color: var(--focus-blue);
 }
+
 
 
 /* ------------------------------------------------------------------------------------MAIN */
@@ -442,14 +516,17 @@ p {
   padding-left: 32px;
   transform: translateY(100%);
   transition: transform 300ms linear;
+  
 }
 .main-description-cards:hover .cover-text{
   transform: translateY(0);
   transition: transform 300ms linear;
+  
 }
 .cover-wrap{
   position: relative;
   overflow: hidden;
+  
 }
 .btn-portfolio {
   padding-top: 96px;
