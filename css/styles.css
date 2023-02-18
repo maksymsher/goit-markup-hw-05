@@ -60,8 +60,7 @@ p {
 }
 
 .header-part {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  
   border-bottom: 1px solid var(--footer-text);
 }
 
@@ -89,6 +88,8 @@ p {
   text-decoration: none;
   color: var(--dark);
   font-family: "Raleway", sans-serif;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-web {
@@ -121,10 +122,7 @@ p {
 
 
 
-
-
-
-.header-list .header-list-text {
+.header-list-text{
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -132,46 +130,39 @@ p {
   color: var(--dark);
 
   position: relative;
-  
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
+
+
+
+
+
+
+
+
+
 
 .header-list-text::after{
   content: '';
-  
-  display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--pressed-state);
-
-
+  
   position: absolute;
   left: 0px;
-top: 48px;
-
-  display: none;
-
+  
+  
+  bottom: -1px;
 }
 
 .header-list-text:is(:hover):after{
   display: block;
+  background-color: var(--pressed-state);
 
+  
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -215,7 +206,7 @@ top: 48px;
 
 
 
-/* ------------------------------------------------------------------------------------MAIN */
+/* ----------------------------------------------MAIN */
 
 
 .section-one {
@@ -380,7 +371,7 @@ top: 48px;
   
 }
 
-/* ----------------------------------------------------------------------------------FOOTER */
+/* ------------------------------------------FOOTER */
 
 .footer-box .footer-logo {
   font-family: "Raleway", sans-serif;
@@ -501,7 +492,53 @@ top: 48px;
 .footer-social-title{
   align-items: baseline;
 }
-/* --------------------------------------------------portfolio */
+
+
+
+/*----- MODAL----- */
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+}
+
+.modal{
+  height: 576px;
+  width: 408px;
+  border-radius: 4px;
+  background-color: #FCFCFC;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 3px 0px #0000001F, 0px 1px 1px 0px #00000024;
+
+}
+
+.btn-modal{
+  width: 24px;
+  height: 24px;
+  background-color: var(--footer-text);
+  border: 1px solid #0000001A;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+ 
+
+}
+
+
+
+
+
+/* -----------------------------------portfolio */
 .cover-text{
   position: absolute;
   top: 0;
@@ -515,12 +552,12 @@ top: 48px;
   padding-top: 40px;
   padding-left: 32px;
   transform: translateY(100%);
-  transition: transform 300ms linear;
+  transition: transform 250ms linear;
   
 }
 .main-description-cards:hover .cover-text{
   transform: translateY(0);
-  transition: transform 300ms linear;
+  transition: transform 250ms linear;
   
 }
 .cover-wrap{
@@ -601,6 +638,13 @@ img {
 }
 
 /* NAO INTERESSA */
+.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
 section {
   display: block;
 }
