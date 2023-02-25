@@ -515,13 +515,17 @@
 
       <div class="input-footer">
         <b class="input-footer-title">Subscribe</b>
+        <div class="footer-inpu-items">
         <input type="text" placeholder="E-mail" class="input-area-footer">
         <button type="submit" class="button-footer">Subscribe</button>
+        </div>
         
 
 
       </div>
     </div>
+
+
     </footer>
 <!-- MODAL -->
    <div class="backdrop is-hidden" data-modal>
@@ -532,7 +536,7 @@
     </button>
     <p class="modal-title">Leave your contacts and we will call you back</p>
     <label for="user-text" class="input-text">Name</label>
-    <input type="text" name="user-name" class="modal-input">
+    <input type="text" name="user-name" class="modal-input" required>
 
     <label for="user-text" class="input-text">Phone</label>
     <input type="text" name="user-tel" class="modal-input">
@@ -545,6 +549,13 @@
       <textarea name="user-text" id="user-text" class="modal-message"></textarea>
     </div>
 
+    <div class="privacy-input">
+    <input type="checkbox" name="" value="Privacy Policy" id="Privacy Policy">
+    <label for="Privacy Policy" class="footer-3-label">I accept the terms and conditions of the <span class="privacy-item"><a href="https://">Privacy Policy</a></span></label>
+    </div>
+
+
+<br>
     <button type="submit" class="modal-button">Send</button>
       
 
