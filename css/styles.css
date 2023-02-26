@@ -512,11 +512,7 @@ border-radius: 4px;
 color: var(--background);
 }
 
-.footer-3-label{
-  width: 360px;
-height: 16px;
-font-size: 12px;
-}
+
 .svg-modal{
   position: absolute;
   left: 40px;
@@ -648,7 +644,7 @@ top: 18px;
 background-color: transparent;
 outline: transparent;
 border-radius: 4px;
-
+padding-left: 38px;
 font-size: 18px;
 }
 .modal-input:is(:hover, :focus){
@@ -667,28 +663,55 @@ letter-spacing: 0.04em;
 
 
 }
+
+.privacy-label{
+  width: 360px;
+height: 16px;
+font-size: 12px;
+gap: 8px;
+display: flex;
+letter-spacing: 0.04em;
+}
+
+
+.privacy-label .svg-check{
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2E2F42;
+border-radius: 2px;
+display: flex;
+align-items: center;
+justify-content: center;
+fill: transparent;
+}
+span{
+  fill: transparent;
+}
+.input-check:checked + .privacy-label .svg-check{
+  background-color: var(--focus-blue);
+  border: none;
+  fill: var(--background);
+}
+
 .modal-button{
   color: var(--background);
   background-color: var(--primary-brand);
-
-
-
-  /* height: 56px;
+  cursor: pointer;
+  height: 56px;
 width: 169px;
 left: 635px;
 top: 584px;
 border-radius: 4px;
 padding: 16px 32px 16px 32px;
-border: none;
-
-
+margin-bottom: 24px;
 box-shadow: 0px 4px 4px 0px #00000026;
-margin: 24px 120px;
-cursor: pointer; */
+border: none;
 }
+
 .modal-button:hover{
   background-color: var(--pressed-state);
 }
+
 .modal-message{
   width: 100%;
   height: 120px;
